@@ -1,2 +1,2 @@
 # 12_dirinfo
-Superior version of ```ls -lR```
+Superior version of ```ls -lR``` ;)
