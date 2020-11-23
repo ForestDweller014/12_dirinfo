@@ -115,8 +115,17 @@ void print_directory(char *path) {
 	depth--;
 }
 
-int main() {
-	char path[PATH_MAX + 1] = "./";
-	print_directory(path);
+int main(int argc, char **argv) {
+	char buffer[PATH_MAX + 1];
+	if (argc == 2) {
+		strcpy(buffer, argv[1]);
+	} else if (argc == 1) {
+		printf("Enter the path to scan: ");
+		scanf("%s", buffer);
+	} else {
+		printf("Invalid number of arguments\n");
+		return -1;
+	}
+	print_directory(buffer);
 	return 0;
 }
