@@ -14,8 +14,8 @@ int depth = -1;
 long long subdir_size = 0;
 
 void strsize(char *buffer, long long size) {
-	char units[4][2] = {"GB", "MB", "KB", "B"};
-	int i = 3;
+	char units[5][2] = {"TB", "GB", "MB", "KB", "B"};
+	int i = 4;
 	float d = (float)size;
 	while (1) {
 		if (d < 1024) {
